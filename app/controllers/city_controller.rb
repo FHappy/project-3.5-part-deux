@@ -10,7 +10,8 @@ class CityController < ApplicationController
 
   private
     def city_params
-      @city = City.find(params[:city_id])
+      @city = City.friendly.find(params[:city_id])
+      # @city = City.find()
     end
     
 end

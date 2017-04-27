@@ -7,20 +7,22 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # seeded cities
-City.create(name: 'Atlanta', country: 'United States of America')
-City.create(name: 'Los Angeles', country: 'United States of America')
-City.create(name: 'New York', country: 'United States of America')
+City.delete_all
+City.create(id: 1, name: 'Atlanta, GA', country: 'United States of America')
+City.create(id: 2, name: 'San Francisco, CA', country: 'United States of America')
+City.create(id: 3, name: 'London', country: 'United Kingdom')
 
 #seeded posts
-
+Post.delete_all
 Post.create(id: 1, title: 'first', content: 'first Test post, yay', city_id: 1, user_id: 1)
 Post.create(id: 2, title: 'second', content: 'second test post', city_id: 1, user_id: 1)
 Post.create(id: 3, title: 'third', content: 'third test post', city_id: 1, user_id: 1)
 
 
 # seeded users
-User.create(first_name: 'Garold', last_name: 'Kushner', email: 'passnKush@aol.com', password: '2wives4eva', password_confirmation: '2wives4eva')
-User.create(first_name: 'Josh', last_name: 'Kushner', email: 'GaryUndJosh2Gether4Ever@hotmail.com', password: 'garyschickenbreast', password_confirmation: 'garyschickenbreast')
+User.delete_all
+User.create(id: 1, first_name: 'Garold', last_name: 'Kushner', email: 'passnKush@aol.com', password: '2wives4eva', password_confirmation: '2wives4eva')
+User.create(id: 2, first_name: 'Josh', last_name: 'Kushner', email: 'GaryUndJosh2Gether4Ever@hotmail.com', password: 'garyschickenbreast', password_confirmation: 'garyschickenbreast')
 
 
 
