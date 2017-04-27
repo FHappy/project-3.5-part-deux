@@ -13,8 +13,9 @@ City.create(name: 'New York', country: 'United States of America')
 
 #seeded posts
 
-Post.create(content: 'Test post, yay', city_id: 1)
-Post.create(content: 'another test post', city_id: 2)
+Post.create(title: 'first', content: 'first Test post, yay', city_id: 1, user_id: 1)
+Post.create(title: 'second', content: 'second test post', city_id: 1, user_id: 1)
+Post.create(title: 'third', content: 'third test post', city_id: 1, user_id: 1)
 
 
 # seeded users
