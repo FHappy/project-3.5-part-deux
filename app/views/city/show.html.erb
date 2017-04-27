@@ -3,6 +3,15 @@
 
 <h1>
   <%= @city.name %>
-
-
 </h1>
+
+<h2>
+
+ <ul>
+   <li>
+    <% @posts.each do |post| %>
+      <%= post.content %>
+    <% end %>
+   </li>
+ </ul>
+</h2>
