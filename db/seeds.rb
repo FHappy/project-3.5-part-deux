@@ -8,8 +8,8 @@
 
 # seeded cities
 City.delete_all
-City.create(id: 1, name: 'Atlanta, GA', country: 'United States of America')
-City.create(id: 2, name: 'San Francisco, CA', country: 'United States of America')
+City.create(id: 1, name: 'Atlanta', country: 'United States of America')
+City.create(id: 2, name: 'San Francisco', country: 'United States of America')
 City.create(id: 3, name: 'London', country: 'United Kingdom')
 
 #seeded posts
