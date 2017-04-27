@@ -18,7 +18,7 @@
             <%= link_to "Edit", post_edit_path(post.id) %>
           </button>
           <button type="button" class="btn btn-default">
-            <%= link_to "X", post_edit_path(post.id) %>
+            <%= link_to "X", post_delete_path(post.id), method: 'delete' %>
           </button>
           
         </li>
