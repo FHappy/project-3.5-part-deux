@@ -11,5 +11,15 @@ City.create(name: 'Atlanta', country: 'United States of America')
 City.create(name: 'Los Angeles', country: 'United States of America')
 City.create(name: 'New York', country: 'United States of America')
 
+#seeded posts
+
+Post.create(content: 'Test post, yay', city_id: 1)
+Post.create(content: 'another test post', city_id: 2)
+
+
 # seeded users
-# coming soon
+User.create(first_name: 'Garold', last_name: 'Kushner', email: 'passnKush@aol.com')
+User.create(first_name: 'Josh', last_name: 'Kushner', email: 'GaryUndJosh2Gether4Ever@hotmail.com')
+
+
+
