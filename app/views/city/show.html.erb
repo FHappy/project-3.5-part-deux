@@ -4,13 +4,23 @@
 <h1>
   <%= @city.name %>
 </h1>
-
+  <button type="button" class="btn btn-default">
+    <%= link_to "New Post", post_new_path(@city.id) %>
+  </button>
 <h2>
 
  <ul>
     <% @posts.each do |post| %>
         <li>
           <%= link_to post.content, post_show_path(post.id) %>
+          
+          <button type="button" class="btn btn-default">
+            <%= link_to "Edit", post_edit_path(post.id) %>
+          </button>
+          <button type="button" class="btn btn-default">
+            <%= link_to "X", post_edit_path(post.id) %>
+          </button>
+          
         </li>
     <% end %>
  </ul>
