@@ -5,6 +5,7 @@ class CityController < ApplicationController
   end
 
   def show
+    @posts = @city.posts
   end
 
   private
