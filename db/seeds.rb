@@ -18,8 +18,8 @@ Post.create(content: 'another test post', city_id: 2)
 
 
 # seeded users
-User.create(first_name: 'Garold', last_name: 'Kushner', email: 'passnKush@aol.com')
-User.create(first_name: 'Josh', last_name: 'Kushner', email: 'GaryUndJosh2Gether4Ever@hotmail.com')
+User.create(first_name: 'Garold', last_name: 'Kushner', email: 'passnKush@aol.com', password: '2wives4eva', password_confirmation: '2wives4eva')
+User.create(first_name: 'Josh', last_name: 'Kushner', email: 'GaryUndJosh2Gether4Ever@hotmail.com', password: 'garyschickenbreast', password_confirmation: 'garyschickenbreast')
 
 
 

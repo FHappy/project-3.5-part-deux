@@ -5,7 +5,7 @@ class CityController < ApplicationController
   end
 
   def show
-    @posts = @city.posts
+    @posts = @city.posts.order('created_at DESC')
   end
 
   private
