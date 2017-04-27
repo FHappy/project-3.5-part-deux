@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
   put 'posts/:post_id' => "post#update", as: "post_update"
 
+  delete 'posts/:post_id' => "post#delete", as: "post_delete"
+
   get 'city/index'
 
   get 'cities/:city_id' => "city#show"

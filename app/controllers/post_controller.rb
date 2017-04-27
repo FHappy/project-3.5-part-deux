@@ -1,5 +1,5 @@
 class PostController < ApplicationController
-  before_action :post_params, only: [:show, :edit, :update]
+  before_action :post_params, only: [:show, :edit, :update, :delete]
   before_action :create_params, only: [:create]
   def show
     
@@ -22,7 +22,6 @@ class PostController < ApplicationController
   end
 
   def create
-    binding.pry
     newPost = Post.create(
       title: params["title"],
       content: params["content"],
@@ -30,6 +29,11 @@ class PostController < ApplicationController
       user_id: current_user.id
     )
     redirect_to "/cities/#{@city.id}"
+  end
+  
+  def delete
+    @post.destroy
+    redirect_to "/cities/#{@post.city_id}"
   end
   
   
