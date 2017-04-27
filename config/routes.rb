@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'post/show'
+  get 'posts/:post_id' => "post#show"
 
   get 'post/new'
 
