@@ -9,9 +9,9 @@
 
  <ul>
     <% @posts.each do |post| %>
-      <li>
-        <%= post.content %>
-      </li>
+        <li>
+          <%= link_to post.content, post_show_path(post.id) %>
+        </li>
     <% end %>
  </ul>
 </h2>
