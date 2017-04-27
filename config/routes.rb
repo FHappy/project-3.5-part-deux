@@ -3,17 +3,19 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  get 'post/new'
+  get 'cities/:city_id/post/new' => "post#new", as: "post_new"
 
-  get 'posts/:post_id' => "post#show", as: "post_show"
+  post 'cities/:city_id/post' => "post#create", as: "post_create"
 
   get 'posts/edit/:post_id' => "post#edit", as: "post_edit"
+
+  get 'posts/:post_id' => "post#show", as: "post_show"
 
   put 'posts/:post_id' => "post#update", as: "post_update"
 
   get 'city/index'
 
-  get 'cities/:id' => "city#show"
+  get 'cities/:city_id' => "city#show"
 
   get 'static_pages/home'
 
