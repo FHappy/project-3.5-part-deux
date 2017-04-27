@@ -1,17 +1,6 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-html {
-  background-image: url("http://i.imgur.com/unEWLPX.jpg");
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  min-height: 100%;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: center;
-}
 
 .bottomNav {
   width: 100%;
@@ -28,4 +17,47 @@ html {
 }
 footer {
   align-content: flex-end;
+}
+
+
+.siteHeading {
+  font-family: times, Times New Roman, times-roman, georgia, serif;
+  color: #444;
+  padding: 0 0 6px 0;
+  font-weight: bold;
+  //background: rgba(200, 200, 200, 0.25);
+  max-width: 500px;
+  margin: auto;
+}
+
+.siteHeadingHead {
+  font-size: 72px;
+  line-height: 72px;
+  letter-spacing: -2px;
+  text-align: center;
+
+}
+
+.siteSubHeading {
+  //font-family: Gill Sans, Verdana;
+  font-size: 18px;
+  //line-height: 20px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  width: 500px;
+  margin: auto;
+  text-align: center;
+}
+
+.siteSubHeadingElement {
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 2px;
+  font-style: italic;
+  background: rgba(200, 200, 200, 0.5);
+  text-align: left;
+}
+
+.siteSubHeadingBody {
+  margin-left: 20px;
 }
