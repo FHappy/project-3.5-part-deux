@@ -13,6 +13,6 @@ City.create(name: 'New York', country: 'United States of America')
 
 #seeded posts
 
-Post.create()
+Post.create(content: 'Test post, yay', city_id: 1)
 # seeded users
 # coming soon
