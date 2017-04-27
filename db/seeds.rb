@@ -11,5 +11,8 @@ City.create(name: 'Atlanta', country: 'United States of America')
 City.create(name: 'Los Angeles', country: 'United States of America')
 City.create(name: 'New York', country: 'United States of America')
 
+#seeded posts
+
+Post.create()
 # seeded users
 # coming soon

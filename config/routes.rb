@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'post/show'
+
+  get 'post/new'
+
   get 'city/index'
 
   get 'cities/:id' => "city#show"
