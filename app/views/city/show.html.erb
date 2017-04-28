@@ -13,19 +13,21 @@
     <% @posts.each do |post| %>
         <li>
           <%= link_to post.title, post_show_path(post.id) %>
-          <% if post.user_id == current_user.id %>
-            <button type="button" class="btn btn-default">
-              <%= link_to "Edit", post_edit_path(post.id) %>
-            </button>
-            <button type="button" class="btn btn-default">
-              <%= link_to "X", 
-                  post_delete_path(post.id), 
-                  method: 'delete', 
-                  data: {
-                    confirm: "Are you sure you want to delete #{post.title}?"
-                    } %>
-            </button>
-          <% end %>
+          <% if user_signed_in? %>
+            <% if post.user_id == current_user.id %>
+              <button type="button" class="btn btn-default">
+                <%= link_to "Edit", post_edit_path(post.id) %>
+              </button>
+              <button type="button" class="btn btn-default">
+                <%= link_to "X", 
+                    post_delete_path(post.id), 
+                    method: 'delete', 
+                    data: {
+                      confirm: "Are you sure you want to delete #{post.title}?"
+                      } %>
+              </button>
+            <% end %>
+          <% end  %>
           <br>
           <p>
             <%= post.content %>
