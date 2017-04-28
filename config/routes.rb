@@ -17,7 +17,7 @@ Rails.application.routes.draw do
 
   get 'city/index'
 
-  get 'cities/:city_id' => "city#show"
+  get 'cities/:city_id' => "city#show", as: "city_show"
 
   get 'static_pages/home'
 

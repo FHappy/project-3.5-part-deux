@@ -22,15 +22,10 @@ class PostController < ApplicationController
   end
 
   def create
-    @post = Post.new(
-      title: params["post"]["title"],
-      content: params["post"]["content"],
-      city_id: @city.id,
-      user_id: current_user.id
-    )
+    @post = Post.new(post_create_params)
 
     if @post.save
-      redirect_to "/cities/#{@city.id}"
+      redirect_to city_show_path(@city.id)
     else
       render :new
     end
@@ -42,9 +37,11 @@ class PostController < ApplicationController
     redirect_to "/cities/#{@post.city_id}"
   end
   
-  # def create_post_params
-  #   params.require(:post).permit(:title, :content)
-  # end
+  def post_create_params
+    params.require(:post)
+      .permit(:title, :content)
+      .merge(user_id: current_user.id, city_id: params[:city_id])
+  end
     
 
   private
