@@ -2,13 +2,13 @@ class PostController < ApplicationController
   before_action :post_params, only: [:show, :edit, :update, :delete]
   before_action :create_params, only: [:create, :new]
   def show
-    
+
   end
 
   def edit
 
   end
-  
+
   def new
     @post = Post.new
   end
@@ -26,20 +26,20 @@ class PostController < ApplicationController
     else
       render :new
     end
-    
+
   end
-  
+
   def delete
     @post.destroy
     redirect_to "/cities/#{@post.city_id}"
   end
-  
+
   def post_create_params
     params.require(:post)
       .permit(:title, :content)
       .merge(user_id: current_user.id, city_id: params[:city_id])
   end
-    
+
 
   private
     def post_params
@@ -49,6 +49,6 @@ class PostController < ApplicationController
     def create_params
       @city = City.find(params[:city_id])
     end
-    
-    
+
+
 end
