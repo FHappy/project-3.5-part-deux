@@ -4,8 +4,17 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  attr_accessible :username
+  attr_accessor :login
+
+  validates :username,
+            presence: true,
+            uniqueness: true
+
+  validates_format_of :username, with: /^[a-zA-Z0-9_\.]*$/, :multiline => true
+
 
   has_many :posts
   has_many :cities, through: :posts
+
+
 end

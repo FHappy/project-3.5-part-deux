@@ -30,7 +30,8 @@ User.create(id: 1,
             img_url: "http://ipinionsyndicate.com/wp-content/uploads/2014/10/revenge-of-the-nerds-wwjustcomedycom.jpg",
             bio: "As a little boy, I always knew I loved to travel. It wasn't until I met my good friend and traveling partner Josh that my dream actualized.
                   I have a love for technology and travel! Please like my posts.",
-            current_city: 'Atlanta, GA'
+            current_city: 'Atlanta, GA',
+            username: 'Garyaintnobitch'
             )
 User.create(id: 2, 
             first_name: 'Geosh', 
@@ -39,8 +40,9 @@ User.create(id: 2,
             password: 'garyschickenbreast', 
             password_confirmation: 'garyschickenbreast',
             img_url: "http://i.imgur.com/ZoNH7EY.jpg",
-            bio: "Hey y'all, I'm Josh. You might recognize me from MTV's The Real World: Las Vegas. I'm kind of a big deal.",
-            current_city: 'Atlanta, GA'
+            bio: "Hey y'all, I'm Geosh. You might recognize me from MTV's The Real World: Las Vegas. I'm kind of a big deal.",
+            current_city: 'Atlanta, GA',
+            username: 'Trainingwheelsstillon'
             )
 
 
