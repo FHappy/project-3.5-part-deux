@@ -3,20 +3,24 @@
 
 <div class="flex-container">
   <div class="userInfo">
-    <div class="userPicture" ><img src="#{img_url}" alt="User Profile Image"></div>
+    <div class="userPicture" ><%= image_tag(@user.img_url) %></div>
     <div class="userDetails">
       <ul>
-        <li><%= user.first_name %> <%= user.last_name %></li>
-        <li><%= user.created_at.to_date%></li>
-        <li><%= user.current_city %></li>
+        <li><%= current_user.first_name %><%= current_user.last_name %></li>
+        <li><%= current_user.created_at.to_date%></li>
+        <li><%= current_user.current_city %></li>
       </ul>
 
     </div>
-    <div class="userButtons"> <button type="button" name="Edit Profile"></button></div>
+    <div class="userButtons"> <button type="button">Edit Profile</button></div>
   </div>
 
   <div class="posts">
-    <div class = "individualPost"></div>
-  </div>
+    <div class="userBio"> <%= @user.bio %></div>
+      <% @posts.each do |post|  %>
+        <div class = "individualPost">
+          <%= post.content %>
 
+      <% end %>
+  </div>
 </div>
