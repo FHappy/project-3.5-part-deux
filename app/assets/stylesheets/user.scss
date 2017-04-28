@@ -1,3 +1,38 @@
-// Place all the styles related to the user controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 400px;
+}
+
+.profile_img {
+  border-radius: 22px;
+  max-width: 300px;
+}
+
+.userBio {
+  text-align: center;
+  padding: 45px 30px 30px 30px;
+}
+
+.individualPost {
+  text-align: center;
+}
+
+// .userInfo {
+//   justify-content: flex-start;
+//   align-items: flex-start;
+//   width: 400px;
+//   background: blue;
+//
+// }
+//
+// .posts {
+//   justify-content: flex-start;
+//   align-items: flex-start;
+//   width: 400px;
+//   background: yellow;
+// }
