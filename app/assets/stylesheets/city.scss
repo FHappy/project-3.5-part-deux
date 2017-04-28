@@ -1,6 +1,4 @@
-// Place all the styles related to the city controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
 
 .city-header {
   display: flex;
@@ -28,3 +26,4 @@
 .city-header--image {
   -webkit-mask-image:-webkit-gradient(linear, left bottom, left top, from(rgba(0,0,0,0)), color-stop(25%, rgba(0,0,0,1)), to(rgba(0,0,0,1)));
 }
+
