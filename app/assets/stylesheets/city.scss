@@ -1,0 +1,29 @@
+
+
+.city-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.header-button {
+  height: 32px;
+  align-self: center;
+  margin: 20px;
+}
+
+.city-header--text {
+  margin: 20px;
+  font-family: times, Times New Roman, times-roman, georgia, serif;
+  color: #444;
+  padding: 0 0 6px 0;
+  font-size: 64px;
+
+}
+.city-header--image {
+  -webkit-mask-image:-webkit-gradient(linear, left bottom, left top, from(rgba(0,0,0,0)), color-stop(25%, rgba(0,0,0,1)), to(rgba(0,0,0,1)));
+}
+

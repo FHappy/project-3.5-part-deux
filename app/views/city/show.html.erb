@@ -1,15 +1,18 @@
-<h1>City#show</h1>
-<p>Find me in app/views/city/show.html.erb</p>
-
-<h1>
-  <%= @city.name %>
-</h1>
-  <button type="button" class="btn btn-default">
+<div class="city-header">
+  <h1 class="city-header--text">
+    <%= @city.name %>
+  </h1>
+  <button type="button" class="btn btn-default header-button">
     <%= link_to "New Post", post_new_path(@city.id) %>
   </button>
-<h2>
+</div>
+<div class="city-header--image">
+  <% if @city.img_url %>
+      <%= image_tag(@city.img_url, :class=> "city_img") %>
+  <% end %>
+</div>
 
- <ul>
+<ul>
     <% @posts.each do |post| %>
         <li>
           <%= link_to post.title, post_show_path(post.id) %>
@@ -35,4 +38,3 @@
         </li>
     <% end %>
  </ul>
-</h2>

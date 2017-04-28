@@ -19,6 +19,15 @@ footer {
   align-content: flex-end;
 }
 
+.carousel-header {
+  //-webkit-text-stroke-width: 1px;
+  //-webkit-text-stroke-color: black;
+  //font-weight: bold;
+  text-shadow: 3px 3px 6px #000000;
+}
+.carousel-body {
+  text-shadow: 3px 3px 6px #000000;
+}
 
 .siteHeading {
   font-family: times, Times New Roman, times-roman, georgia, serif;

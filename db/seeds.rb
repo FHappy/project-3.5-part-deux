@@ -8,7 +8,7 @@
 
 # seeded cities
 City.delete_all
-City.create(id: 1, name: 'Atlanta', country: 'United States of America')
+City.create(id: 1, name: 'Atlanta', country: 'United States of America', img_url:'http://i.imgur.com/mju1Kg8.jpg')
 City.create(id: 2, name: 'San Francisco', country: 'United States of America')
 City.create(id: 3, name: 'London', country: 'United Kingdom')
 

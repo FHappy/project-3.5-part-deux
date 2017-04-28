@@ -1,8 +1,10 @@
 
 <div class="flex-container">
   <div class="userInfo">
+    <% if @user.img_url %>
     <div class="userPicture" ><%= image_tag(@user.img_url, :class=> "profile_img") %></div>
-    <div class="userDetails">
+    <% end %>
+        <div class="userDetails">
       <ul>
         <li><%= current_user.first_name %><%= current_user.last_name %></li>
         <li><%= current_user.created_at.to_date%></li>
