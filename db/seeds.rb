@@ -33,7 +33,7 @@ User.create(id: 1,
             current_city: 'Atlanta, GA'
             )
 User.create(id: 2, 
-            first_name: 'Josh', 
+            first_name: 'Geosh', 
             last_name: 'Kushner', 
             email: 'GaryUndJosh2Gether4Ever@hotmail.com', 
             password: 'garyschickenbreast', 
