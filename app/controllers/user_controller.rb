@@ -11,5 +11,9 @@ class UserController < ApplicationController
   def index
   end
 
+  private
+    def user_params
+      @user = User.friendly.find(params[:user_id])
+    end
 
 end
