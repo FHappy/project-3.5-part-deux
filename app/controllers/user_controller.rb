@@ -7,5 +7,7 @@ class UserController < ApplicationController
   def index
   end
 
-  
+  @user = User
+
+
 end

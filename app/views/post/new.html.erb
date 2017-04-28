@@ -4,7 +4,7 @@
 <p>Find me in app/views/post/new.html.erb</p>
 
 <%= bootstrap_form_for(@post, inline_errors: false, url: post_create_path) do |f| %>
-  <%= f.alert_message "Please fix the errors below." %>
+  <%= f.alert_message "There was a problem creating your post:" %>
   <%= f.text_field :title %>
   <%= f.text_field :content %>
   <%= f.submit "Create Post" %>
