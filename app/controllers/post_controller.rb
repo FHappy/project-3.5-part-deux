@@ -14,10 +14,7 @@ class PostController < ApplicationController
   end
 
   def update
-    @post.update(
-      title: params["title"],
-      content: params["content"]
-    )
+    @post.update(post_create_params)
     redirect_to "/posts/#{@post.id}"
   end
 
