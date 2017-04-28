@@ -14,8 +14,11 @@ class PostController < ApplicationController
   end
 
   def update
-    @post.update(post_create_params)
-    redirect_to "/posts/#{@post.id}"
+    if @post.update(post_create_params)
+      redirect_to "/posts/#{@post.id}"
+    else
+      render :edit
+    end
   end
 
   def create
