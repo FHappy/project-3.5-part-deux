@@ -17,10 +17,16 @@ class User < ApplicationRecord
   attr_accessor :login
   has_many :posts, dependent: :destroy
   has_many :cities, through: :posts
-  has_many :active_bonds, class_name: "Bond",
-                          foreign_key: "follower_id",
-                          dependent: :destroy
+
+  has_many :active_bonds,  class_name: "Bond",
+                           foreign_key: "follower_id",
+                           dependent: :destroy
+  has_many :passive_bonds, class_name: "Bond",
+                           foreign_key: "followed_id",
+                           dependent: :destroy
+
   has_many :following, through: :active_bonds, source: :followed
+  has_many :followers, through: :passive_bonds
 
   def login
     @login || self.username || self.email
