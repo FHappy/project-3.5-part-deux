@@ -4,18 +4,17 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   
-  include FriendlyId
-  friendly_id :username
-
-  attr_accessor :login
-
   validates :username,
             presence: true,
             uniqueness: true
 
   validates_format_of :username, with: /^[a-zA-Z0-9_\.]*$/, :multiline => true
+  before_save :downcase_username
 
+  include FriendlyId
+  friendly_id :username_downcase
 
+  attr_accessor :login
   has_many :posts
   has_many :cities, through: :posts
 
@@ -35,5 +34,10 @@ class User < ApplicationRecord
       end
     end
   end
+
+  def downcase_username
+    self.username_downcase = self.username.downcase
+  end
+
 
 end
