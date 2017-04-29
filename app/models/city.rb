@@ -6,7 +6,7 @@ class City < ApplicationRecord
 
   friendly_id :name_downcase
 
-  has_many :posts
+  has_many :posts, dependent: :destroy
 
 
 

@@ -15,8 +15,11 @@ class User < ApplicationRecord
   friendly_id :username_downcase
 
   attr_accessor :login
-  has_many :posts
+  has_many :posts, dependent: :destroy
   has_many :cities, through: :posts
+  has_many :active_bonds, class_name: "Bond",
+                          foreign_key: "follower_id",
+                          dependent: :destroy
 
   def login
     @login || self.username || self.email
