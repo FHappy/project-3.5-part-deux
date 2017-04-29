@@ -20,6 +20,7 @@ class User < ApplicationRecord
   has_many :active_bonds, class_name: "Bond",
                           foreign_key: "follower_id",
                           dependent: :destroy
+  has_many :following, through: :active_bonds, source: :followed
 
   def login
     @login || self.username || self.email
@@ -41,6 +42,22 @@ class User < ApplicationRecord
   def downcase_username
     self.username_downcase = self.username.downcase
   end
+
+  # BOND METHODS
+  def follow(other_user)
+    self.following << other_user
+  end
+
+  def unfollow(other_user)
+    self.following.delete(other_user)
+  end
+
+  def following?(other_user)
+    self.following.include?(other_user)
+  end
+  
+  
+  
 
 
 end
