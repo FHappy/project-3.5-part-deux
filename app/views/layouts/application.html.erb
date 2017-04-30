@@ -5,6 +5,7 @@
     <%= csrf_meta_tags %>
     <!-- Latest compiled and minified CSS & JS -->
     <link rel="stylesheet" media="screen" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT|Open+Sans|Poiret+One" rel="stylesheet">
     <script src="//code.jquery.com/jquery.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
@@ -16,34 +17,33 @@
   </head>
 
   <body>
-   <%#basic navbar, obviously we'll edit it later%>
-    <nav class="ourNav navbar navbar-default" role="navigation">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+  <!-- Nav -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+
+      <div class="navbar-header page-scroll">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/">Vagabond</a>
+        <a class="brand navbar-brand" href="/">Vagabond</a>
       </div>
-    
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse navbar-ex1-collapse">
-        <ul class="nav navbar-nav">
-        </ul>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
           <% if user_signed_in? %>
-            <li><%= link_to "Profile", user_show_path(current_user.id)  %></li>
-            <li><%= link_to "Logout", destroy_user_session_path, method: 'delete' %></li>
-          <% else %>
-            <li><%= link_to "Sign Up", new_user_registration_path %></li>
-            <li><%= link_to "Log In", new_user_session_path %></li>
-          <% end %>
+              <li><%= link_to "Profile", user_show_path(current_user.id)  %></li>
+              <li><%= link_to "Logout", destroy_user_session_path, method: 'delete' %></li>
+              <% else %>
+              <li><%= link_to "Sign Up", new_user_registration_path %></li>
+              <li><%= link_to "Log In", new_user_session_path %></li>
+              <% end %>
         </ul>
-      </div><!-- /.navbar-collapse -->
-    </nav>
+      </div>
+    </div>
+  </nav>
 
     <% if notice %>
       <p class="alert alert-success"><%= notice %></p>
@@ -51,17 +51,54 @@
     <% if alert %>
       <p class="alert alert-danger"><%= alert %></p>
     <% end %>
-    
-    <div>
+    <div class="head-spacer"></div>
+    <section>
       <%= yield %>
-    </div>
-    <footer class="bottomNav">
-      <div class="leftBottomNav">
+    </section>
+    <!--<footer class="bottomNav">-->
+      <!--<div class="leftBottomNav">-->
 
+      <!--</div>-->
+      <!--<div class="RightBottomNav">-->
+        <!--<input type="button" class="btn btn-success" value="Back to Top" onclick="location.href = '#navbar';"></button>-->
+
+      <!--</div>-->
+    <!--</footer>-->
+
+    <footer class="text-center">
+      <div class="footer-above">
+        <div class="container">
+          <div class="row">
+
+            <div class="footer-col col-md-12">
+              <h3>Around the Web</h3>
+              <ul class="list-inline">
+                <li>
+                  <a href="" class="btn-social btn-outline"><i class="fa fa-" aria-hidden="true"></i></a>
+                </li>
+                <li>
+                  <a href="" class="btn-social btn-outline"><i class="fa fa-github" aria-hidden="true"></i></a>
+                </li>
+                <li>
+                  <a href="" class="btn-social btn-outline"><i class="fa fa-github" aria-hidden="true"></i></a>
+                </li>
+                <li>
+                  <a href="" class="btn-social btn-outline"><i class="fa fa-github" aria-hidden="true"></i></a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="RightBottomNav">
-        <input type="button" class="btn btn-success" value="Back to Top" onclick="location.href = '#navbar';"></button>
-
+      <div class="footer-below">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              Copyright © 2017
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
     </body>
