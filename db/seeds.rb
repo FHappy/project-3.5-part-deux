@@ -45,5 +45,10 @@ User.create(id: 2,
             username: 'Trainingwheelsstillon'
             )
 
+# seeded bonds
+Bond.delete_all
+Bond.create(id: 1, follower_id: 1, followed_id: 2)
+Bond.create(id: 2, follower_id: 2, followed_id: 1)
+
 
 

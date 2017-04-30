@@ -13,7 +13,7 @@ class UserController < ApplicationController
 
   private
     def user_params
-      @user = User.friendly.find(params[:user_id])
+      @user = User.friendly.find(params[:user_id].to_s.downcase)
     end
 
 end

@@ -4,20 +4,29 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   
-  include FriendlyId
-  friendly_id :username
-
-  attr_accessor :login
-
   validates :username,
             presence: true,
             uniqueness: true
 
   validates_format_of :username, with: /^[a-zA-Z0-9_\.]*$/, :multiline => true
+  before_save :downcase_username
 
+  include FriendlyId
+  friendly_id :username_downcase
 
-  has_many :posts
+  attr_accessor :login
+  has_many :posts, dependent: :destroy
   has_many :cities, through: :posts
+
+  has_many :active_bonds,  class_name: "Bond",
+                           foreign_key: "follower_id",
+                           dependent: :destroy
+  has_many :passive_bonds, class_name: "Bond",
+                           foreign_key: "followed_id",
+                           dependent: :destroy
+
+  has_many :following, through: :active_bonds, source: :followed
+  has_many :followers, through: :passive_bonds
 
   def login
     @login || self.username || self.email
@@ -35,5 +44,26 @@ class User < ApplicationRecord
       end
     end
   end
+
+  def downcase_username
+    self.username_downcase = self.username.downcase
+  end
+
+  # BOND METHODS
+  def follow(other_user)
+    self.following << other_user
+  end
+
+  def unfollow(other_user)
+    self.following.delete(other_user)
+  end
+
+  def following?(other_user)
+    self.following.include?(other_user)
+  end
+  
+  
+  
+
 
 end

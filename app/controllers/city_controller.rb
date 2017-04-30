@@ -10,7 +10,7 @@ class CityController < ApplicationController
 
   private
     def city_params
-      @city = City.friendly.find(params[:city_id])
+      @city = City.friendly.find(params[:city_id].to_s.downcase)
       # @city = City.find()
     end
     
