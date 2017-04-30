@@ -1,0 +1,41 @@
+
+<div class="flex-container">
+  <div class="userInfo">
+    <% if @user.img_url %>
+    <div class="userPicture" ><%= image_tag(@user.img_url, :class=> "profile_img") %></div>
+    <% end %>
+        <div class="userDetails">
+      <ul>
+        <li><%= current_user.first_name %><%= current_user.last_name %></li>
+        <li><%= current_user.created_at.to_date%></li>
+        <li><%= current_user.current_city %></li>
+      </ul>
+
+    </div>
+    <div class="userButtons"> <button type="button">Edit Profile</button></div>
+  </div>
+
+  <div class="posts">
+    <div class="userBio"> <%= @user.bio %></div>
+      <% @posts.each do |post|  %>
+        <div class = "individualPost">
+          <%= post.content %>
+            <% if post.user_id == current_user.id %>
+            <button type="button" class="btn btn-default">
+              <%= link_to "Edit", post_edit_path(post.id) %>
+            </button>
+
+            <button type="button" class="btn btn-default">
+              <%= link_to "X",
+                  post_delete_path(post.id),
+                  method: 'delete',
+                  data: {
+                    confirm: "Are you sure you want to delete #{post.title}?"
+                    } %>
+            </button>
+
+            <% end %>
+      <% end %>
+  </div>
+</div>
+</div>
