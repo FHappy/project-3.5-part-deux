@@ -7,7 +7,6 @@ class BondsController < ApplicationController
   end
   
   def destroy
-    binding.pry
     user = Bond.find(params[:id]).followed
     current_user.unfollow(user)
     redirect_to "/users"

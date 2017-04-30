@@ -28,6 +28,8 @@ class User < ApplicationRecord
   has_many :following, through: :active_bonds, source: :followed
   has_many :followers, through: :passive_bonds
 
+  has_many :comments
+
   def login
     @login || self.username || self.email
   end

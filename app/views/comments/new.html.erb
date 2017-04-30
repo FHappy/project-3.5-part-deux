@@ -1,0 +1,8 @@
+<h4>ADD A COMMENT</h4>
+
+<%= bootstrap_form_for(@comment, inline_errors: false, url: comment_create_path) do |f| %>
+  <%= f.alert_message "There was a problem creating your comment:" %>
+  <%= f.text_field :content %>
+  <%= f.submit "Create Comment" %>
+
+<% end %>

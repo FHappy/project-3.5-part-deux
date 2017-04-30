@@ -1,8 +1,14 @@
 <h2>EDIT POST PAGE</h2>
 
-<%= bootstrap_form_for(@post, inline_errors: false, url: post_update_path(@post), method: :put) do |f| %>
-  <%= f.alert_message "There was a problem updating your post:" %>
-  <%= f.text_field :title, placeholder: @post.title %>
-  <%= f.text_field :content, placeholder: @post.content %>
-  <%= f.submit "Update Post" %>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+      <%= bootstrap_form_for(@post, inline_errors: false, url: post_update_path(@post), method: :put) do |f| %>
+        <%= f.alert_message "There was a problem updating your post:" %>
+        <%= f.text_field :title, placeholder: @post.title %>
+        <%= f.text_area :content, placeholder: @post.content %>
+        <%= f.submit "Update Post" %>
+      <% end %>
+    </div>
+  </div>
+</div>
