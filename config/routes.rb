@@ -31,6 +31,12 @@ Rails.application.routes.draw do
 
   get 'users/:user_id/followers' => "user#followers", as: "user_followers"
 
+  get 'posts/:post_id/comments/new' => "comments#new", as: "comment_new"
+
+  post 'posts/:post_id/comments' => "comments#create", as: "comment_create"
+
+  delete 'posts/:post_id/comments/:comment_id' => "comments#delete", as: "comment_delete"
+
   resources :bonds, only: [:create, :destroy]
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

@@ -16,7 +16,7 @@ class PostController < ApplicationController
 
   def update
     if @post.update(post_create_params)
-      redirect_to "/posts/#{@post.id}"
+      redirect_to post_show_path(@post)
     else
       render :edit
     end
