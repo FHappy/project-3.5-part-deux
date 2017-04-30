@@ -5,13 +5,18 @@
     <% end %>
         <div class="userDetails">
       <ul>
-        <li><%= current_user.first_name %> <%= current_user.last_name %></li>
-        <li><%= current_user.created_at.to_date%></li>
-        <li><%= current_user.current_city %></li>
+        <li><%= @user.first_name %> <%= @user.last_name %></li>
+        <li><%= @user.created_at.to_date%></li>
+        <li><%= @user.current_city %></li>
       </ul>
 
     </div>
-    <div class="userButtons"> <button type="button">Edit Profile</button></div>
+    <div class="userButtons"> 
+      <%= button_to "Edit Profile", 
+                    user_edit_path(@user), 
+                    :class => 'btn btn-info', 
+                    method: 'get' %>
+    </div>
   </div>
 
   <div class="posts">
