@@ -25,7 +25,9 @@ Post.delete_all
 Post.create(id: 1, title: 'first', content: 'first Test post, yay', city_id: 1, user_id: 1)
 Post.create(id: 2, title: 'second', content: 'second test post', city_id: 1, user_id: 1)
 Post.create(id: 3, title: 'third', content: 'third test post', city_id: 1, user_id: 1)
-
+Post.first.update(created_at: Time.utc(2017, 4, 27))
+Post.second.update(created_at: Time.utc(2017, 4, 16))
+Post.third.update(created_at: Time.utc(2017, 4, 23))
 
 # seeded users
 User.delete_all
