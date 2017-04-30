@@ -6,7 +6,10 @@
         <% current_user.following.each do |user| %>
           <% user.posts.each do |post| %>
             <li class="list-group-item">
-              <%= post.content %>
+              <h4><%= user.username %></h4>
+              <br>
+              <h6><%= post.title %></h6>
+              <p><%= post.content %></p> 
               <br>
               <%= post.city.name %>
             </li>
