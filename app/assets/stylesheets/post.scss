@@ -1,3 +1,12 @@
-// Place all the styles related to the post controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.outter {
+  position: absolute;
+  width: 400px;
+  height: 250px;
+  z-index: 15;
+  top: 50%;
+  left: 50%;
+  margin: -100px 0 0 -150px;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+.inner {
+}
