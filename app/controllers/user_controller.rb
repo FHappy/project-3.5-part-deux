@@ -1,7 +1,8 @@
 class UserController < ApplicationController
   before_action :authenticate_user!
+  before_action :user_params, only: [:show]
   def show
-    @user = current_user
+    # @user = current_user
     @posts = @user.posts
     # @posts = @user.posts.map do |post|
     #   post.content
@@ -10,6 +11,11 @@ class UserController < ApplicationController
 
   def index
   end
+
+  def profile
+    
+  end
+  
 
   private
     def user_params

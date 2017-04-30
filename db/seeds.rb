@@ -57,7 +57,7 @@ User.create(id: 3,
             username: 'LimaBean694eva'
             )
 User.create(id: 4,
-            first_name: 'Tommy'
+            first_name: 'Tommy',
             last_name: 'The Pupper',
             email: 'GoodBoy@pups.org',
             password: 'borkbork',
@@ -108,10 +108,10 @@ Bond.delete_all
 Bond.create(id: 1, follower_id: 1, followed_id: 2)
 Bond.create(id: 2, follower_id: 2, followed_id: 1)
 Bond.create(id: 3, follower_id: 3, followed_id: 4)
-Bond.create(id: 3, follower_id: 3, followed_id: 1)
-Bond.create(id: 3, follower_id: 3, followed_id: 2)
-Bond.create(id: 3, follower_id: 3, followed_id: 5)
-Bond.create(id: 3, follower_id: 3, followed_id: 6)
+Bond.create(id: 4, follower_id: 3, followed_id: 1)
+Bond.create(id: 5, follower_id: 3, followed_id: 2)
+Bond.create(id: 6, follower_id: 3, followed_id: 5)
+Bond.create(id: 7, follower_id: 3, followed_id: 6)
 
 
 
