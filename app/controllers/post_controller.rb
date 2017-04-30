@@ -23,7 +23,6 @@ class PostController < ApplicationController
 
   def create
     @post = Post.new(post_create_params)
-
     if @post.save
       redirect_to city_show_path(@city.id)
     else

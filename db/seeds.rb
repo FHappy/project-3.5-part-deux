@@ -44,11 +44,74 @@ User.create(id: 2,
             current_city: 'Atlanta, GA',
             username: 'Trainingwheelsstillon'
             )
+User.create(id: 3,
+            first_name: 'Lima',
+            last_name: 'Bean',
+            email: 'itsLiamDamnt@gmail.com',
+            password: 'default',
+            password_confirmation: 'default',
+            img_url: 'http://i.imgur.com/9f9gnRA.jpg',
+            bio: "Hi everybody I'm Liam. I have a cool jacket and my dog has an underbite.
+                  Don't forget to follow me!",
+            current_city: 'Atlanta, GA',
+            username: 'LimaBean694eva'
+            )
+User.create(id: 4,
+            first_name: 'Tommy'
+            last_name: 'The Pupper',
+            email: 'GoodBoy@pups.org',
+            password: 'borkbork',
+            password_confirmation: 'borkbork',
+            img_url: 'http://i.imgur.com/4ID8ez1.jpg',
+            bio: "If you like bad boys, then unfollow immediately. Only good boys here.
+                  Will bork for treats.",
+            current_city: 'Atlanta, GA',
+            username: 'MakeBorkNotHeck'
+            )
+User.create(id: 5,
+            first_name: 'Brandi',
+            last_name: 'Posey',
+            email: 'DoomGurl26@aol.com',
+            password: 'default',
+            password_confirmation: 'default',
+            img_url: 'http://i.imgur.com/PNPzn02.jpg',
+            bio: "Hi, I'm Brandi. I love quickiemarts and swords. My friends like to joke that I'm a LITTLE CRAZY.
+                  Follow me and check out all my posts!",
+            current_city: 'New York, NY',
+            username: 'DoomGenerationGirl'
+            )
+User.create(id: 6,
+            first_name: 'Johnny',
+            last_name: 'The Gorilla',
+            email: 'RIPHarambe@hotmail.com',
+            password: 'default',
+            password_confirmation: 'default',
+            img_url: 'http://i.imgur.com/eHVkPAZ.jpg',
+            bio: "JOHNNY GOOD",
+            current_city: 'Cincinatti, OH',
+            username: 'GorillaboiJohnny'
+            )
+User.create(id: 7,
+            first_name: 'Jane',
+            last_name: 'Doe',
+            email: 'Jesusismyhomegurl@blessed.com',
+            password: 'default',
+            password_confirmation: 'default',
+            img_url: 'http://i.imgur.com/FdUuCe0.jpg',
+            bio: "Hey everybody, I'm Jane. Come check out my posts and follow if you like.",
+            current_city: 'San Francisco, CA',
+            username: 'UnibrowJane'
+            )
 
 # seeded bonds
 Bond.delete_all
 Bond.create(id: 1, follower_id: 1, followed_id: 2)
 Bond.create(id: 2, follower_id: 2, followed_id: 1)
+Bond.create(id: 3, follower_id: 3, followed_id: 4)
+Bond.create(id: 3, follower_id: 3, followed_id: 1)
+Bond.create(id: 3, follower_id: 3, followed_id: 2)
+Bond.create(id: 3, follower_id: 3, followed_id: 5)
+Bond.create(id: 3, follower_id: 3, followed_id: 6)
 
 
 
