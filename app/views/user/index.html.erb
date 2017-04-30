@@ -30,7 +30,10 @@
                 <% if user_signed_in? %>
                   <td>
                     <% if current_user.following?(user) %>
-                      
+                      <%= form_for(@user.active_bonds.find_by(followed_id: user.id), 
+                                   method: 'delete') do |f| %>
+                        <%= f.submit "Unfollow", class: "btn btn-danger" %>
+                      <% end %>
                     <% else %>
                       <%= form_for(@user.active_bonds.build) do |f| %>
                         <div>
