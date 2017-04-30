@@ -1,23 +1,7 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-.bottomNav {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-content: flex-end;
-  background-color: white;
-  position : absolute;
-  bottom : 0;
-  height : 20px;
-  padding: 10px
-}
-footer {
-  align-content: flex-end;
-}
+//
 
 .carousel-header {
   //-webkit-text-stroke-width: 1px;
