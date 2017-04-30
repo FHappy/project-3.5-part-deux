@@ -14,6 +14,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require sweetalert
+//= require sweet-alert-confirm
 
 /*!
  * Start Bootstrap - Freelancer Bootstrap Theme (http://startbootstrap.com)
@@ -88,5 +90,4 @@ var cbpAnimatedHeader = (function() {
     init();
 
 })();
-
 

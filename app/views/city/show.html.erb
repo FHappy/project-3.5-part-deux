@@ -26,7 +26,12 @@
                     post_delete_path(post.id), 
                     method: 'delete', 
                     data: {
-                      confirm: "Are you sure you want to delete #{post.title}?"
+                      :'sweet-alert-confirm' => "Are you sure you want to delete #{post.title}?",
+                      :'confirm-button-text' => 'Delete',
+                      :'cancel-button-text' => 'Cancel',
+                      :'confirm-button-color' => '#D9534F',
+                      :'sweet-alert-type' => 'error',
+                      text: 'This cannot be undone.'
                       } %>
               </button>
             <% end %>

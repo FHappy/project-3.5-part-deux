@@ -42,7 +42,9 @@ gem 'pry'
 gem 'friendly_id', '~> 5.1.0'
 gem 'font-awesome-sass'
 gem 'bootstrap-sass', '~> 3.3.6'
-
+gem 'sweet-alert'
+gem 'sweetalert-rails'
+gem 'sweet-alert-confirm'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

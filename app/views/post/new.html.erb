@@ -7,6 +7,13 @@
   <%= f.alert_message "There was a problem creating your post:" %>
   <%= f.text_field :title %>
   <%= f.text_field :content %>
-  <%= f.submit "Create Post" %>
+  <%= f.submit "Create Post", data: {
+                  :'sweet-alert-confirm' => "Are you sure you want to create this post?",
+                  :'confirm-button-text' => 'Create',
+                  :'cancel-button-text' => 'Cancel',
+                  :'confirm-button-color' => '#5CB85C',
+                  :'sweet-alert-type' => 'success',
+                  text: 'This can be edited later.'
+                  } %>
 
 <% end %>
