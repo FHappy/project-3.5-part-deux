@@ -193,9 +193,6 @@ header .intro-text .skills {
 .navbar-inverse {
     border: 0;
 }
-.navbar-toggle {
-    background-color: ;
-}
 .navbar-toggle:hover {
     background-color: #d0efe5;
 }
