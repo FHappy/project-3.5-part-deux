@@ -21,9 +21,15 @@ Rails.application.routes.draw do
 
   get 'static_pages/home'
 
-  get 'user/:user_id' => "user#show", as: "user_show"
+  get 'users' => "user#index"
+
+  get 'users/:user_id' => "user#show", as: "user_show"
   
-  get 'user/:user_id/profile' => "user#profile", as: "user_profile"
+  get 'users/:user_id/profile' => "user#profile", as: "user_profile"
+
+  get 'users/:user_id/following' => "user#following", as: "user_following"
+
+  get 'users/:user_id/followers' => "user#followers", as: "user_followers"
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

@@ -1,4 +1,5 @@
 class PostController < ApplicationController
+  before_action :authenticate_user!, only: [:edit, :new, :delete]
   before_action :post_params, only: [:show, :edit, :update, :delete]
   before_action :create_params, only: [:create, :new]
   def show

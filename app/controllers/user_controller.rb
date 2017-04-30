@@ -1,6 +1,6 @@
 class UserController < ApplicationController
-  before_action :authenticate_user!, only: [:index, :profile]
-  before_action :user_params, only: [:show, :profile]
+  before_action :authenticate_user!, only: [:profile]
+  before_action :user_params, only: [:show, :profile, :following, :followers]
   def show
     # @user = current_user
     @posts = @user.posts
@@ -10,12 +10,22 @@ class UserController < ApplicationController
   end
 
   def index
+    @users = User.all
   end
 
   def profile
     @user = current_user
     @posts = @user.posts
   end
+
+  def following
+    @users = @user.following
+  end
+  
+  def followers
+    @users = @user.followers
+  end
+  
   
 
   private
