@@ -1,0 +1,25 @@
+<h4>Edit User Profile</h4>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+      <%= bootstrap_form_for(@user, inline_errors: false, url: user_update_path(@user), method: :put) do |f| %>
+        <%= f.alert_message "There was a problem updating your profile:" %>
+        <%= f.text_field :first_name, placeholder: @user.first_name %>
+        <%= f.text_field :last_name, placeholder: @user.last_name %>
+        <%= f.text_field :current_city, placeholder: @user.current_city %>
+        <%= f.text_area :img_url, placeholder: @user.img_url %>
+        <%= f.text_area :bio, placeholder: @user.bio %>
+        <%= f.submit "Update Profile", data: {
+                  :'sweet-alert-confirm' => "Are you sure you want to edit your profile?",
+                  :'confirm-button-text' => 'Edit',
+                  :'cancel-button-text' => 'Cancel',
+                  :'confirm-button-color' => '#428BCA',
+                  :'sweet-alert-type' => 'info',
+                  text: 'This can be changed later.'
+                  } %>
+      <% end %>
+    </div>
+  </div>
+</div>
