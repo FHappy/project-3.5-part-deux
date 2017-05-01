@@ -76,7 +76,20 @@ h6 {
     height: 700px;
 }
 
-
+a.back-to-top {
+    display: none;
+    width: 60px;
+    height: 60px;
+    text-indent: -9999px;
+    position: fixed;
+    z-index: 999;
+    right: 20px;
+    bottom: 20px;
+    background: #1b5f5e url("http://i.imgur.com/5ojMZeY.png") no-repeat center 43%;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+}
 
 .img-centered {
     margin: 0 auto;
