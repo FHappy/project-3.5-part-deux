@@ -69,7 +69,9 @@ h6 {
  color: #fff;
 }
 
-
+.editForm {
+    align-content: center;
+}
 .img-centered {
     margin: 0 auto;
 }
