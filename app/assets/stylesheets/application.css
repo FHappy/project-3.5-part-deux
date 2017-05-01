@@ -69,6 +69,13 @@ h6 {
  color: #fff;
 }
 
+.editForm {
+
+    text-align: center;
+}
+.editFormBox {
+    height: 700px;
+}
 
 .img-centered {
     margin: 0 auto;
@@ -149,6 +156,25 @@ header .intro-text .skills {
     }
 }
 
+.postCity {
+    padding: 20px;
+    font-family: 'Poiret One', cursive;
+    color: #1b5f5e;
+    /*text-transform: uppercase;*/
+    font-size: 2em;
+}
+
+.postComments {
+    padding: 20px;
+    font-family: 'Old Standard TT', serif;
+    color: #1b5f5e;
+    /*text-transform: uppercase;*/
+    font-size: 1.5em;
+}
+
+.profile {
+    height: 100%;
+}
 
 /*font-family: 'Old Standard TT', serif;*/
 /*font-family: 'Poiret One', cursive;*/
@@ -248,6 +274,9 @@ header .intro-text .skills {
     /*background-color: #d0efe5;*/
 }
 
+.profile_img {
+    border-radius: 6px;
+}
 section {
     padding: 75px 0;
 }

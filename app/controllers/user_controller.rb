@@ -21,7 +21,8 @@ class UserController < ApplicationController
   def index
     @user = current_user
     @users = User.all
-    @hash = Gmaps4rails.build_markers(@users) do |user, marker|
+    @map_users = @users.reject {|user| !user.current_city}
+    @hash = Gmaps4rails.build_markers(@map_users) do |user, marker|
       marker.lat user.latitude
       marker.lng user.longitude
       marker.infowindow "#{user.first_name} #{user.last_name} \n #{user.username}"
