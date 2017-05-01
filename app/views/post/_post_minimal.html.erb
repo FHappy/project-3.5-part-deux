@@ -34,6 +34,10 @@
                                   } %>
 
                 <% end %>
+                <%= link_to comment_new_path(@post.id) do %>
+                  <br>
+                  <i class="fa fa-plus-square fa-2x" aria-hidden="true"></i>Add Comment
+                <% end %>
             <% end %>
             </div>
           </div>
