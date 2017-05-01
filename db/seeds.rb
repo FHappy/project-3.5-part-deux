@@ -75,7 +75,7 @@ User.create(id: 4,
             img_url: 'http://i.imgur.com/4ID8ez1.jpg',
             bio: "If you like bad boys, then unfollow immediately. Only good boys here.
                   Will bork for treats.",
-            current_city: 'Atlanta, GA',
+            current_city: 'Tokyo, Japan',
             username: 'MakeBorkNotHeck'
             )
 User.create(id: 5,
@@ -111,6 +111,40 @@ User.create(id: 7,
             bio: "Hey everybody, I'm Jane. Come check out my posts and follow if you like.",
             current_city: 'San Francisco, CA',
             username: 'UnibrowJane'
+            )
+User.create(id: 8,
+            first_name: 'Tom',
+            last_name: 'Anderson',
+            email: 'TomA420@myspace.com',
+            password: 'default',
+            password_confirmation: 'default',
+            img_url: 'http://i.imgur.com/w5VylSQ.jpg',
+            bio: "Hey guys, it's me Tom! Just an ordinary, forgettable guy. Follow me and check out all my adventures!",
+            current_city: 'Amsterdam, Netherlands',
+            username: 'MyspaceRulez'
+            )
+User.create(id: 9,
+            first_name: 'Ja',
+            last_name: 'Rule',
+            email: 'everythugneeds@laday.com',
+            password: 'default',
+            password_confirmation: 'default',
+            img_url: 'http://i.imgur.com/zObeuDC.jpg',
+            bio: "Who made these laws? That's what I want to know. So that's why I wear two crosses now. I call it double cross. I believe in God-not religion.
+                  FyreFest 2k18 ya'll, can't wait for the next hunger games.",
+            current_city: 'Exumas, Bahamas',
+            username: 'jaRuleClassWar'
+            )
+User.create(id: 10,
+            first_name: 'Stephanie',
+            last_name: 'Garland',
+            email: 'fakeName@fake.org',
+            password: 'default',
+            password_confirmation: 'default',
+            img_url: 'http://i.imgur.com/Z60LgkX.jpg',
+            bio: "Pommy ipsum got his end away middle class curry sauce the black death, wedding tackle balderdash off with her head nonsense pork scratchings, knackered codswallop flabbergasted off with her head. Is she 'avin a laugh rambunctious off t'pub bloke bent as a nine bob note snotty nosed brat good old fashioned knees up the chippy lost her marbles made a pig's ear of it a bit wonky Moriarty, loo it's the bees knees bugger every fortnight oopsy-daisies we'll be 'avin less of that Union Jack accordingly porky-pies. Gravy cheese and chips marvelous ever so houlligan loo rivetting stuff, scouser punter gob up the duff knee high to a grasshopper i'll be a monkey's uncle, whizz pikey off t'shop toad in the whole.",
+            current_city: 'London, United Kingdom',
+            username: 'jollyHood'
             )
 
 # seeded bonds

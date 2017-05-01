@@ -13,9 +13,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
 //= require sweetalert
 //= require sweet-alert-confirm
+//= require underscore
+//= require gmaps/google
+//= require_tree .
+
 
 /*!
  * Start Bootstrap - Freelancer Bootstrap Theme (http://startbootstrap.com)
