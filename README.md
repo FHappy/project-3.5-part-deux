@@ -44,10 +44,10 @@ Travel community for users to share posts about their favorite locations around 
 
 ##Contributors
 
-[Julian Ireland-Chandler](https://github.com/jcireland14)
-[Hassan Masroor](https://github.com/FHappy)
-[Joy Sutton](https://github.com/ejoysutton)
-[Michael Torres](https://github.com/mtorres23)
+*[Julian Ireland-Chandler](https://github.com/jcireland14)
+*[Hassan Masroor](https://github.com/FHappy)
+*[Joy Sutton](https://github.com/ejoysutton)
+*[Michael Torres](https://github.com/mtorres23)
 
 
 
