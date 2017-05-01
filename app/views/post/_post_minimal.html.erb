@@ -4,16 +4,17 @@
       <div class="list-group">
         <li class="list-group-item">
           <div class="feed-body">
-            <h3 class="feed-item"><%= @post.user.username %></h3>
-
-            <h4><%= @post.title %></h4>
+            <%= link_to post_show_path(@post.id) do %>
+            <h3><%= @post.title %></h3>
+                <% end %>
             <br>
             <p><%= @post.content %></p>
             <br>
-            <%= @post.city.name %>
-            <br>
-            <
-            <%= @post.time_difference %>
+            <div class="postFooter">
+              <span class="postCity"><%= @post.city.name %>, <%= @post.city.country %> </span>
+
+              <span class="postComments">Number of comments: <%= @post.comments.length %>,   <%= @post.time_difference %></span>
+
             <% if user_signed_in? %>
                 <% if @post.user_id == current_user.id %>
 
@@ -34,9 +35,11 @@
 
                 <% end %>
             <% end %>
+            </div>
           </div>
         </li>
       </div>
     </div>
   </div>
 </div>
+<br>

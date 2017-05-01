@@ -1,26 +1,32 @@
-<div class="flex-container">
+
+<div class="flex-container profile">
   <div class="userInfo">
     <% if @user.img_url %>
-    <div class="userPicture" ><%= image_tag(@user.img_url, :class=> "profile_img") %></div>
+    <div class="userPicture" ><%= image_tag(@user.img_url, :class=> "profile_img img-rounded") %></div>
     <% end %>
         <div class="userDetails">
       <ul>
-        <li><%= @user.first_name %> <%= @user.last_name %></li>
-        <li><%= @user.created_at.to_date%></li>
-        <li><%= @user.current_city %></li>
+        <h3><%= @user.first_name %> <%= @user.last_name %></h3>
+        <hr>
+        <p><%= @user.username %></p>
+        <h4>Vagabond since:</h4>
+        <h5><%= @user.created_at.to_date%></h5>
+        <h4>Current City:</h4>
+        <h5><%= @user.current_city %></h5>
       </ul>
 
-    </div>
-    <div class="userButtons"> 
-      <%= button_to "Edit Profile", 
-                    user_edit_path, 
-                    :class => 'btn btn-info', 
-                    method: 'get' %>
-    </div>
+          <div class="userButtons">
+            <%= button_to "Edit Profile",
+                          user_edit_path,
+                          :class => 'btn btn-info',
+                          method: 'get' %>
+          </div>
+        </div>
   </div>
 
-  <div class="posts">
-    <div class="userBio"> <%= @user.bio %></div>
+
+  <div class="posts ">
+    <div class="userBio"><h3>Vagabond profile:</h3><p> <%= @user.bio %></p></div>
       <% if @posts.length != 0 %>
         <% @posts.each do |post|  %>
           <%= render "post/post_minimal", collection: @post = post %>
@@ -32,5 +38,4 @@
       <%= will_paginate @posts, :class => 'apple_pagination' %>
 
   </div>
-</div>
 </div>
