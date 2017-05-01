@@ -1,6 +1,6 @@
 class UserController < ApplicationController
   before_action :authenticate_user!, only: [:profile, :edit, :feed]
-  before_action :user_params, only: [:show, :profile, :following, :followers]
+  before_action :user_params, only: [:show, :following, :followers]
   def show
     @posts = @user.posts
   end
@@ -12,7 +12,7 @@ class UserController < ApplicationController
   def update
     @user = current_user
     if @user.update(user_update_params)
-      redirect_to user_profile_path(@user)
+      redirect_to user_profile_path
     else
       render :edit
     end

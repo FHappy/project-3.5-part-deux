@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'user/index'
 
   devise_for :users
-  
+
   get 'cities/:city_id/post/new' => "post#new", as: "post_new"
 
   post 'cities/:city_id/post' => "post#create", as: "post_create"
@@ -23,14 +23,14 @@ Rails.application.routes.draw do
 
   get 'users' => "user#index"
 
+  get 'users/profile' => "user#profile", as: "user_profile"
+
   get 'users/:user_id' => "user#show", as: "user_show"
 
   get 'users/:user_id/edit' => "user#edit", as: "user_edit"
 
   put 'users/:user_id' => "user#update", as: "user_update"
   
-  get 'users/:user_id/profile' => "user#profile", as: "user_profile"
-
   get 'users/:user_id/following' => "user#following", as: "user_following"
 
   get 'users/:user_id/followers' => "user#followers", as: "user_followers"
