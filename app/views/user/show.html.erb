@@ -12,8 +12,30 @@
       </ul>
 
     </div>
-    <div class="userButtons"> <button type="button">Edit Profile</button></div>
   </div>
+
+
+
+
+<div class="col-lg-8">
+  <% if user_signed_in? %>
+    <% if @user.id != current_user.id %>
+      <% if current_user.following?(@user) %>
+        <%= form_for(current_user.active_bonds.find_by(followed_id: @user.id), 
+                      method: 'delete') do |f| %>
+          <%= f.submit "Unfollow", class: "btn btn-danger" %>
+        <% end %>
+      <% else %>
+        <%= form_for(current_user.active_bonds.build) do |f| %>
+          <div>
+            <%= hidden_field_tag :followed_id, @user.id %>
+          </div>
+          <%= f.submit "Follow", class: "btn btn-primary"%>
+        <% end %>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>
 
   <div class="posts">
     <div class="userBio"> <%= @user.bio %></div>
