@@ -1,23 +1,25 @@
-
-
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 <h3>
   <%= @post.title %>
 </h3>
+<h4>Written by <%= link_to user_show_path(@post.user) do %>
+      <%= @post.user.username %>
+  <% end %></h4>
 <p>
   <%= @post.content %>
 </p>
-
-<p>Written by <%= @post.user.username %></p>
-
+<div class="postFooter">
+  <span class="postCity"><%= @post.city.name %>, <%= @post.city.country %> </span>
+  <span class="postComments">Number of comments: <%= @post.comments.length %>,   <%= @post.time_difference %></span>
 <% if user_signed_in? %>
   <% if @post.user_id == current_user.id %>
     <button type="button" class="btn btn-default">
       <%= link_to "Edit", post_edit_path(@post.id) %>
     </button>
     <button type="button" class="btn btn-default">
-      <%= link_to "X", 
-          post_delete_path(@post.id), 
-          method: 'delete', 
+      <%= link_to "X",
+          post_delete_path(@post.id),
+          method: 'delete',
           data: {
             :'sweet-alert-confirm' => "Are you sure you want to delete #{@post.title}?",
             :'confirm-button-text' => 'Delete',
@@ -28,21 +30,25 @@
             } %>
     </button>
   <% end %>
-  <%= link_to "Add Comment", comment_new_path(@post) %>
+      <hr>
+      </div>
 <% end %>
-
-
-<h4>Comments: </h4>
-  
-  <ul class="list-group">
+  <br>
+</div>
+<h3>Comments:     <button class="btn btndefault">
+  <%= link_to "Add Comment", comment_new_path(@post) %>
+</button>
+</h3>
+<ul class="list-group">
     <% @post.comments.each do |comment| %>
-
       <li class="list-group-item">
-        <%= comment.content %>
+        <p><%= comment.content %></p>
+        <h4>Written by <%= link_to user_show_path(comment.user) do %>
+              <%= comment.user.username %>
+              <% end %>
           <% if user_signed_in? %>
             <% if current_user.id == comment.user.id %>
-              <button type="button" class="btn btn-danger">
-                <%= link_to "X",
+                <%= link_to ('<i class="fa fa-trash fa-2x" aria-hidden="true"></i>').html_safe,
                     "/posts/#{@post.id}/comments/#{comment.id}",
                     method: 'delete',
                     data: {
@@ -54,21 +60,9 @@
                       text: 'This cannot be undone.'
                       }
                     %>
-              </button>
             <% end %>
           <% end %>
+        </h4>
       </li>
-
     <% end %>
   </ul>
-  
-
-
-      
-   
-
-
-
-
-
-
