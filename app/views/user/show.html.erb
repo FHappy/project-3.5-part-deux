@@ -41,30 +41,7 @@
     <div class="userBio"> <%= @user.bio %></div>
       <% if @posts.length != 0 %>
         <% @posts.each do |post|  %>
-          <div class = "individualPost">
-            <%= post.content %>
-              <% if user_signed_in? %>
-                <% if post.user_id == current_user.id %>
-                <button type="button" class="btn btn-default">
-                  <%= link_to "Edit", post_edit_path(post.id) %>
-                </button>
-
-                <button type="button" class="btn btn-default">
-                  <%= link_to "X", 
-                    post_delete_path(post.id), 
-                    method: 'delete', 
-                    data: {
-                      :'sweet-alert-confirm' => "Are you sure you want to delete #{post.title}?",
-                      :'confirm-button-text' => 'Delete',
-                      :'cancel-button-text' => 'Cancel',
-                      :'confirm-button-color' => '#D9534F',
-                      :'sweet-alert-type' => 'error',
-                      text: 'This cannot be undone.'
-                      } %>
-                </button>
-
-                <% end %>
-              <% end %>
+          <%= render "post/post", collection: @post = post %>
         <% end %>
       <% else %>
         <p><%= "#{@user.username} hasn't written any posts." %></p>
