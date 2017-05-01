@@ -25,9 +25,9 @@ Rails.application.routes.draw do
 
   get 'users/profile' => "user#profile", as: "user_profile"
 
-  get 'users/:user_id' => "user#show", as: "user_show"
+  get 'users/profile/edit' => "user#edit", as: "user_edit"
 
-  get 'users/:user_id/edit' => "user#edit", as: "user_edit"
+  get 'users/:user_id' => "user#show", as: "user_show"
 
   put 'users/:user_id' => "user#update", as: "user_update"
   
