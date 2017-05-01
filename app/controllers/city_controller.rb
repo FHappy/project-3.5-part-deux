@@ -6,6 +6,7 @@ class CityController < ApplicationController
 
   def show
     @posts = @city.posts.order('created_at DESC')
+    @posts = @posts.paginate(:page => params[:page], per_page: 10)
   end
 
   private
