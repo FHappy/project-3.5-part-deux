@@ -34,7 +34,7 @@ class PostController < ApplicationController
 
   def delete
     @post.destroy
-    redirect_to "/cities/#{@post.city_id}"
+    redirect_back(fallback_location: root_path)
   end
 
   def post_create_params
