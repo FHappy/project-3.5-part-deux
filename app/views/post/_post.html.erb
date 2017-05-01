@@ -7,37 +7,40 @@
                       <%= image_tag(@post.user.img_url, :class=> "profile_img_feed img-rounded img-responsive") %>
                     </div>
                     <div class="feed-body">
-                      <h3 class="feed-item"><%= @post.user.username %></h3>
-
-                      <h4><%= @post.title %></h4>
+                      <%= link_to @user_show_path(@post.user.id) do %>
+                          <h3><%= @post.user.username %></h3>
+                      <% end %>
+                      <%= link_to post_show_path(@post.id) do %>
+                          <h4><%= @post.title %></h4>
+                      <% end %>
                       <br>
                       <p><%= @post.content %></p>
                       <br>
-                      <%= @post.city.name %>
-                      <br>
-                      <%= @post.time_difference %>
-                      <% if user_signed_in? %>
-                        <% if @post.user_id == current_user.id %>
-                        <button type="button" class="btn btn-default">
-                          <%= link_to "Edit", post_edit_path(@post.id) %>
-                        </button>
+                      <div class="postFooter">
+                        <span class="postCity"><%= @post.city.name %>, <%= @post.city.country %> </span>
+                          <br>
+                        <span class="postComments">Number of comments: <%= @post.comments.length %>,   <%= @post.time_difference %></span>
 
-                        <button type="button" class="btn btn-default">
-                          <%= link_to "X", 
-                            post_delete_path(@post.id), 
-                            method: 'delete', 
-                            data: {
-                              :'sweet-alert-confirm' => "Are you sure you want to delete #{@post.title}?",
-                              :'confirm-button-text' => 'Delete',
-                              :'cancel-button-text' => 'Cancel',
-                              :'confirm-button-color' => '#D9534F',
-                              :'sweet-alert-type' => 'error',
-                              text: 'This cannot be undone.'
-                              } %>
-                        </button>
+                        <% if user_signed_in? %>
+                            <% if @post.user_id == current_user.id %>
 
+                                <%= link_to post_edit_path(@post.id) do %>
+                                    <i class="fa fa-pencil fa-2x" aria-hidden="true"></i>
+                                <% end %>
+
+                                <%= link_to ('<i class="fa fa-trash fa-2x" aria-hidden="true"></i>').html_safe, post_delete_path(@post.id),
+                                            method: 'delete',
+                                            data: {
+                                                :'sweet-alert-confirm' => "Are you sure you want to delete #{@post.title}?",
+                                                :'confirm-button-text' => 'Delete',
+                                                :'cancel-button-text' => 'Cancel',
+                                                :'confirm-button-color' => '#D9534F',
+                                                :'sweet-alert-type' => 'error',
+                                                text: 'This cannot be undone.'
+                                            } %>
+
+                            <% end %>
                         <% end %>
-                      <% end %>
                     </div>
                   </li>
           </div>
