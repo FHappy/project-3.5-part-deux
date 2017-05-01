@@ -2,7 +2,7 @@ class UserController < ApplicationController
   before_action :authenticate_user!, only: [:profile, :edit, :feed]
   before_action :user_params, only: [:show, :following, :followers]
   def show
-    @posts = @user.posts
+    @posts = @user.posts.paginate(:page => params[:page], per_page: 10)
   end
 
   def edit
@@ -30,7 +30,7 @@ class UserController < ApplicationController
 
   def profile
     @user = current_user
-    @posts = @user.posts
+    @posts = @user.posts.paginate(:page => params[:page], per_page: 10)
   end
 
   def following
@@ -52,6 +52,7 @@ class UserController < ApplicationController
       params.require(:user)
             .permit(:first_name, :last_name, :bio, :img_url, :current_city)
     end
+
     
 
 end
