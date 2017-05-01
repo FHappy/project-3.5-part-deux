@@ -69,7 +69,9 @@ class User < ApplicationRecord
     if !self.bio
       self.bio = 'Edit your profile and add a quick bio!'
     end
-    self.img_url = 'http://i.imgur.com/y4MoBvi.jpg'
+    if !self.img_url
+      self.img_url = 'http://i.imgur.com/y4MoBvi.jpg'
+    end
   end
 
   # BOND METHODS
