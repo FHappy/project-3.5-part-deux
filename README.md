@@ -1,24 +1,60 @@
-# README
+# Vagabond Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Application Name: Vag·a·bond
 
-Things you may want to cover:
+Vag·a·bond (noun)
+   1. a person who wanders from place to place
 
-* Ruby version
+Travel community for users to share posts about their favorite locations around the world.
 
-* System dependencies
+## Deployed Link
+* [Heroku Link](http://vagabond-by-the-best-group.herokuapp.com/)
 
-* Configuration
 
-* Database creation
+## App Overview
 
-* Database initialization
+  Vagabond is a travel community where users can share their post about their travels and adventures.  Users can also choose to follow each other and comment on posts made by others.
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
 
-* ...
+## Stretch Goals/ Future Features
+
+* Add search function to query over user's names and usernames
+* Google Flights API
+* Truncation for posts
+
+
+## Entity Relationship Diagrams (Database Modeling)
+
+![ERD](http://i.imgur.com/GYyO5FQ.jpg)
+
+
+
+## Technologies Used
+
+  * Languages - HTML5, CSS3, Sass, Ruby on Rails, Jquery, Javascript, CoffeeScript
+  * Design -  Google Fonts, Bootstrap, Sweetalerts, Font Awesome
+  * Authentication - Devise
+  * [Wireframes](./wireframes.png)
+  * [User Stories](./user-stories.md)
+  * [Trello](https://trello.com/b/NAVIMVWI/vagabond)
+  * [Powerpoint] (https://docs.google.com/presentation/d/1ImvnUZPVdny22o1lU5l9f0WIMxtZNdR6CiwZc9u-bdY/pub?start=true&loop=false&delayms=60000)
+
+
+##Contributors
+
+  [Github] Julian Ireland-Chandler (https://github.com/jcireland14)
+  [Github] Hassan Masroor (https://github.com/FHappy)
+  [Github] Joy Sutton (https://github.com/ejoysutton)
+  [Github] Michael Torres (https://github.com/mtorres23)
+
+
+
+
+
+
+
+
+
+
