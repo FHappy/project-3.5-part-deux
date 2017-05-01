@@ -17,8 +17,8 @@ ActiveRecord::Base.connection.reset_pk_sequence!('bonds')
 # seeded cities
 City.delete_all
 City.create(id: 1, name: 'Atlanta', country: 'United States of America', img_url:'http://i.imgur.com/mju1Kg8.jpg')
-City.create(id: 2, name: 'San Francisco', country: 'United States of America')
-City.create(id: 3, name: 'London', country: 'United Kingdom')
+City.create(id: 2, name: 'San Francisco', country: 'United States of America', img_url: 'http://i.imgur.com/z7ZwJKx.jpg')
+City.create(id: 3, name: 'London', country: 'United Kingdom', img_url: 'http://i.imgur.com/Buc18bN.jpg')
 
 #seeded posts
 Post.delete_all
@@ -356,9 +356,5 @@ Bond.create(id: 75, follower_id: 10, followed_id: 6)
 Bond.create(id: 76, follower_id: 10, followed_id: 7)
 Bond.create(id: 77, follower_id: 10, followed_id: 8)
 Bond.create(id: 78, follower_id: 10, followed_id: 9)
-
-
-
-
 
 
