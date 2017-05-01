@@ -30,6 +30,9 @@ class User < ApplicationRecord
 
   has_many :comments
 
+  geocoded_by :current_city
+  after_validation :geocode
+  
   def login
     @login || self.username || self.email
   end
