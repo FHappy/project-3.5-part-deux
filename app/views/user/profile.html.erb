@@ -30,7 +30,7 @@
       <p> <%= @user.bio %></p>
       <% if @user.cities.uniq.length == 1 %>
           <p><%= "You have contributed to one city: #{@user.cities.uniq[0].name}" %></p>
-      <% else %>
+      <% elsif @user.cities.uniq.length > 1 %>
           <p><%= "You have contrbuted to #{@user.cities.uniq.length} cities:" %></p>
           <ul>
               <% @user.cities.uniq.each do |city| %>
