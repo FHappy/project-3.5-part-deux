@@ -15,7 +15,7 @@ class PostController < ApplicationController
   end
 
   def update
-    if @post.update(post_create_params)
+    if @post.update(post_update_params)
       redirect_to post_show_path(@post)
     else
       render :edit
@@ -34,7 +34,7 @@ class PostController < ApplicationController
 
   def delete
     @post.destroy
-    redirect_to "/cities/#{@post.city_id}"
+    redirect_back(fallback_location: root_path)
   end
 
   def post_create_params
@@ -42,6 +42,13 @@ class PostController < ApplicationController
       .permit(:title, :content)
       .merge(user_id: current_user.id, city_id: params[:city_id])
   end
+
+  def post_update_params
+    params.require(:post)
+      .permit(:title, :content)
+      .merge(user_id: current_user.id, city_id: @post.city_id)
+  end
+  
 
 
   private
