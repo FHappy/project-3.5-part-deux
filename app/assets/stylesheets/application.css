@@ -69,6 +69,12 @@ h6 {
  color: #fff;
 }
 
+.editForm {
+    text-align: center;
+}
+.editFormBox {
+    height: 700px;
+}
 
 .img-centered {
     margin: 0 auto;
