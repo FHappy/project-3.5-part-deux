@@ -3,21 +3,22 @@
   <div class="row">
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
       <ul class="list-group">
-        <% current_user.following.each do |user| %>
-          <% user.posts.each do |post| %>
+          <% current_user.sorted_posts.each do |post| %>
             <li class="list-group-item">
-              <h4><%= user.username %></h4>
+              <h4><%= post.user.username %></h4>
               <br>
               <h6><%= post.title %></h6>
-              <p><%= post.content %></p> 
+              <br>
+              <p><%= post.content %></p>
               <br>
               <%= post.city.name %>
               <br>
               <%= post.time_difference %>
             </li>
           <% end %>
-        <% end %>
       </ul>
     </div>
   </div>
 </div>
+
+
