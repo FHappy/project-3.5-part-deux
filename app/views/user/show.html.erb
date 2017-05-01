@@ -38,7 +38,21 @@
 
 
   <div class="posts ">
-    <div class="userBio"><h3>Vagabond profile:</h3><p> <%= @user.bio %></p></div>
+    <div class="userBio"><h3>Vagabond profile:</h3>
+        <p> <%= @user.bio %></p>
+        <% if @user.cities.uniq.length == 1 %>
+            <p><%= "This user has contributed to one city: #{@user.cities.uniq[0].name}" %></p>
+        <% else %>
+            <p><%= "This user has contrbuted to #{@user.cities.uniq.length} cities:" %></p>
+            <ul>
+                <% @user.cities.uniq.each do |city| %>
+                    <li>
+                        <%= city.name %>
+                    </li>
+                <% end %>
+            </ul>
+    <% end %>
+    </div>
     <% if @posts.length != 0 %>
         <% @posts.each do |post|  %>
             <%= render "post/post_minimal", collection: @post = post %>
