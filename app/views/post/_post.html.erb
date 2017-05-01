@@ -7,7 +7,7 @@
                       <%= image_tag(@post.user.img_url, :class=> "profile_img_feed img-rounded img-responsive") %>
                     </div>
                     <div class="feed-body">
-                      <%= link_to @user_show_path(@post.user.id) do %>
+                      <%= link_to user_show_path(@post.user) do %>
                           <h3><%= @post.user.username %></h3>
                       <% end %>
                       <%= link_to post_show_path(@post.id) do %>

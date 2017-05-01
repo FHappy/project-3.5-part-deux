@@ -10,6 +10,7 @@ class User < ApplicationRecord
 
   validates_format_of :username, with: /^[a-zA-Z0-9_\.]*$/, :multiline => true
   before_save :downcase_username
+  before_save :default_name_and_img
 
   include FriendlyId
   friendly_id :username_downcase
@@ -62,6 +63,13 @@ class User < ApplicationRecord
       end  
     end
     posts.sort! {|x,y| y.created_at <=> x.created_at}
+  end
+
+  def default_name_and_img
+    if !self.bio
+      self.bio = 'Edit your profile and add a quick bio!'
+    end
+    self.img_url = 'http://i.imgur.com/y4MoBvi.jpg'
   end
 
   # BOND METHODS
