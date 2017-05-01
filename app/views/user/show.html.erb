@@ -70,7 +70,7 @@
         <p><%= "#{@user.username} hasn't written any posts." %></p>
       <% end %>
       <br>
-      <%= will_paginate @posts %>
+      <%= will_paginate @posts, :class => 'apple_pagination' %>
   </div>
 </div>
 </div>
