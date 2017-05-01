@@ -1,53 +1,53 @@
 
-<div class="flex-container">
+<div class="flex-container profile">
   <div class="userInfo">
     <% if @user.img_url %>
-    <div class="userPicture" ><%= image_tag(@user.img_url, :class=> "profile_img") %></div>
+        <div class="userPicture" ><%= image_tag(@user.img_url, :class=> "profile_img img-rounded") %></div>
     <% end %>
-        <div class="userDetails">
+    <div class="userDetails">
       <ul>
-        <li><%= @user.first_name %> <%= @user.last_name %></li>
-        <li><%= @user.created_at.to_date%></li>
-        <li><%= @user.current_city %></li>
+        <h3><%= @user.first_name %> <%= @user.last_name %></h3>
+        <hr>
+        <p><%= @user.username %></p>
+        <h4>Vagabond since:</h4>
+        <h5><%= @user.created_at.to_date%></h5>
+        <h4>Current City:</h4>
+        <h5><%= @user.current_city %></h5>
       </ul>
-
+      <div class="userButtons">
+      <% if user_signed_in? %>
+          <% if @user.id != current_user.id %>
+              <% if current_user.following?(@user) %>
+                  <%= form_for(current_user.active_bonds.find_by(followed_id: @user.id),
+                               method: 'delete') do |f| %>
+                      <%= f.submit "UnBond", class: "btn btn-danger" %>
+                  <% end %>
+              <% else %>
+                  <%= form_for(current_user.active_bonds.build) do |f| %>
+                      <div>
+                        <%= hidden_field_tag :followed_id, @user.id %>
+                      </div>
+                      <%= f.submit "Bond", class: "btn btn-success"%>
+                  <% end %>
+              <% end %>
+          <% end %>
+      <% end %>
+      </div>
     </div>
   </div>
 
 
-
-
-<div class="col-lg-8">
-  <% if user_signed_in? %>
-    <% if @user.id != current_user.id %>
-      <% if current_user.following?(@user) %>
-        <%= form_for(current_user.active_bonds.find_by(followed_id: @user.id), 
-                      method: 'delete') do |f| %>
-          <%= f.submit "Unfollow", class: "btn btn-danger" %>
-        <% end %>
-      <% else %>
-        <%= form_for(current_user.active_bonds.build) do |f| %>
-          <div>
-            <%= hidden_field_tag :followed_id, @user.id %>
-          </div>
-          <%= f.submit "Follow", class: "btn btn-primary"%>
-        <% end %>
-      <% end %>
-    <% end %>
-  <% end %>
-</div>
-
-  <div class="posts">
-    <div class="userBio"> <%= @user.bio %></div>
-      <% if @posts.length != 0 %>
+  <div class="posts ">
+    <div class="userBio"><h3>Vagabond profile:</h3><p> <%= @user.bio %></p></div>
+    <% if @posts.length != 0 %>
         <% @posts.each do |post|  %>
-          <%= render "post/post", collection: @post = post %>
+            <%= render "post/post_minimal", collection: @post = post %>
         <% end %>
-      <% else %>
+    <% else %>
         <p><%= "#{@user.username} hasn't written any posts." %></p>
-      <% end %>
-      <br>
-      <%= will_paginate @posts, :class => 'apple_pagination' %>
+    <% end %>
+    <br>
+    <%= will_paginate @posts, :class => 'apple_pagination' %>
+
   </div>
-</div>
 </div>
