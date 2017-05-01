@@ -23,7 +23,7 @@
     <div class="userBio"> <%= @user.bio %></div>
       <% if @posts.length != 0 %>
         <% @posts.each do |post|  %>
-          <%= render "post/post", collection: @post = post %>
+          <%= render "post/post_minimal", collection: @post = post %>
         <% end %>
       <% else %>
         <p><%= "#{@user.username} hasn't written any posts." %></p>
