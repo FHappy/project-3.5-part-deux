@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'user/index'
 
   devise_for :users
-
+  
   get 'cities/:city_id/post/new' => "post#new", as: "post_new"
 
   post 'cities/:city_id/post' => "post#create", as: "post_create"

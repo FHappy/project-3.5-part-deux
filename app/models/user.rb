@@ -51,6 +51,16 @@ class User < ApplicationRecord
     self.username_downcase = self.username.downcase
   end
 
+  def sorted_posts
+    posts = []
+    self.following.each do |user|
+      user.posts.each do |post|
+        posts << post
+      end  
+    end
+    posts.sort! {|x,y| y.created_at <=> x.created_at}
+  end
+
   # BOND METHODS
   def follow(other_user)
     self.following << other_user

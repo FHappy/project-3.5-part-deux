@@ -1,5 +1,5 @@
 class UserController < ApplicationController
-  before_action :authenticate_user!, only: [:profile, :edit]
+  before_action :authenticate_user!, only: [:profile, :edit, :feed]
   before_action :user_params, only: [:show, :profile, :following, :followers]
   def show
     @posts = @user.posts
