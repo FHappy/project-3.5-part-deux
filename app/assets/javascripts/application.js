@@ -13,7 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require sweet-alert
+//= require sweetalert
 //= require sweet-alert-confirm
 //= require underscore
 //= require gmaps/google
