@@ -39,15 +39,15 @@ Travel community for users to share posts about their favorite locations around 
   * [Wireframes](./wireframes.png)
   * [User Stories](./user-stories.md)
   * [Trello](https://trello.com/b/NAVIMVWI/vagabond)
-  * [Powerpoint] (https://docs.google.com/presentation/d/1ImvnUZPVdny22o1lU5l9f0WIMxtZNdR6CiwZc9u-bdY/pub?start=true&loop=false&delayms=60000)
+  * [Powerpoint](https://docs.google.com/presentation/d/1ImvnUZPVdny22o1lU5l9f0WIMxtZNdR6CiwZc9u-bdY/pub?start=true&loop=false&delayms=60000)
 
 
 ##Contributors
 
-  [Github] Julian Ireland-Chandler (https://github.com/jcireland14)
-  [Github] Hassan Masroor (https://github.com/FHappy)
-  [Github] Joy Sutton (https://github.com/ejoysutton)
-  [Github] Michael Torres (https://github.com/mtorres23)
+[Julian Ireland-Chandler](https://github.com/jcireland14)
+[Hassan Masroor](https://github.com/FHappy)
+[Joy Sutton](https://github.com/ejoysutton)
+[Michael Torres](https://github.com/mtorres23)
 
 
 
