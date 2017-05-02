@@ -55,7 +55,7 @@ Post.create(id: 30, title: 'Outdoor movie night', content: 'Curl into a furry do
 Post.create(id: 31, title: 'Topgolf', content: 'Squirty cheese bocconcini cheesy grin. Chalk and cheese smelly cheese halloumi jarlsberg halloumi cheese triangles the big cheese ricotta. Cheesy grin paneer fromage frais gouda cottage cheese blue castello caerphilly cheese triangles. Chalk and cheese.', city_id: 1, user_id: 5)
 Post.create(id: 32, title: 'The circus is in town!', content: 'Chet Thomas nose-bump opposite footed pop shove-it tail hang up. Fakie coping dude yeah coffin. Poseur bone air transfer Upland melancholy kick-nose. Sketchy mute-air mongo tailslide bearings. Baseplate hard flip Christ air trucks hip Kevin Ancell. Invert Steve Caballero judo air griptape frontside air crailtap. Hard flip soul skate nose blunt shinner betty. Durometer Jeff Phillips kickflip risers bearings 360. Coper flail hip Tracker fakie. Steve Steadham kickturn crail grab aerial no comply tuna-flip.', city_id: 2, user_id: 6)
 Post.create(id: 33, title: 'Stroll through the park', content: 'Flannel freegan VHS unicorn food truck. Gentrify vice VHS, fap la croix green juice man braid vinyl tilde kitsch. Woke waistcoat copper mug, pop-up tattooed beard schlitz chillwave bespoke polaroid vexillologist listicle. Copper mug keffiyeh pinterest, tattooed pabst asymmetrical meditation shoreditch. La croix tattooed tote bag, swag direct trade tilde squid small batch roof party schlitz master cleanse dreamcatcher waistcoat.', city_id: 2, user_id: 7)
-Post.create(id: 34, title:  'Taco tuesday', content: 'Skate ipsum dolor sit amet, nose bail freestyle 720 axle manual. Finger flip Japan air tuna-flip half-cab dude tic-tac. Pool fakie out Z-Roller nosepicker risers soul skate slob air. Cab flip axle coping transfer 720 launch ramp. Ollie bank pop shove-it half-cab Mike Vallely wall ride nose blunt. Camel back pivot method air darkslide grind crailtap. Bank handplant blunt frigid air face plant slam. Wax slide hard flip Kevin Harris ollie hole pool. Nose slide full-cab rock and roll coffin durometer pivot.', city_id: 3, user_id: 8)
+Post.create(id: 34, title: 'Taco tuesday', content: 'Skate ipsum dolor sit amet, nose bail freestyle 720 axle manual. Finger flip Japan air tuna-flip half-cab dude tic-tac. Pool fakie out Z-Roller nosepicker risers soul skate slob air. Cab flip axle coping transfer 720 launch ramp. Ollie bank pop shove-it half-cab Mike Vallely wall ride nose blunt. Camel back pivot method air darkslide grind crailtap. Bank handplant blunt frigid air face plant slam. Wax slide hard flip Kevin Harris ollie hole pool. Nose slide full-cab rock and roll coffin durometer pivot.', city_id: 3, user_id: 8)
 Post.create(id: 35, title: 'Night on the town', content: 'Sustainable godard XOXO, kinfolk williamsburg cardigan leggings ethical schlitz vegan YOLO flexitarian banjo vaporware normcore. Tilde flannel retro quinoa knausgaard, blue bottle chicharrones jean shorts mustache vexillologist heirloom chartreuse. Echo park yuccie hella fingers', city_id: 1, user_id: 9)
 Post.create(id: 36, title: 'Best pizza around', content: 'Marfa snackwave air plant subway tile vice messenger bag enamel pin humblebrag direct trade. Hell of wayfarers live-edge, locavore polaroid cronut sustainable. Four loko flexitarian kale chips tumblr locavore. Raclette bespoke locavore, chicharrones chartreuse lumbersexual tumeric tacos gluten-free poutine hexagon enamel pin jianbing. Church-key flexitarian YOLO bicycle rights small batch neutra. Chillwave vaporware keffiyeh raw denim. Offal brooklyn subway tile, etsy shoreditch ennui whatever.', city_id: 3, user_id: 10)
 Post.create(id: 37, title: 'Time for a run', content: 'Freak human out make funny noise mow mow mow mow mow mow success now attack human chew iPad power cord purr so leave fur on owners clothes or knock dish off table head butt cant eat out of my own dish. Cereal boxes make for five star accommodation ask for petting go into a room to decide you did not want to be in there anyway yet chew foot, yet scratch the box if it smells like fish eat as much as you wish. I am getting hungry. Cat not kitten around then cats take over the world and meow all night having their mate disturbing sleeping humans kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff or nap all day, or if it fits, i sits', city_id: 1, user_id: 1)
@@ -151,119 +151,114 @@ Post.find(60).update(created_at: Time.utc(2017, 4, 14, 8, 18))
 # seeded users
 User.delete_all
 User.create(id: 1,
-            first_name: 'Garold',
-            last_name: 'Kushner',
-            email: 'passnKush@aol.com',
-            password: 'mountaineerMondayz',
-            password_confirmation: 'mountaineerMondayz',
-            img_url: "http://ipinionsyndicate.com/wp-content/uploads/2014/10/revenge-of-the-nerds-wwjustcomedycom.jpg",
-            bio: "As a little boy, I always knew I loved to travel. It wasn't until I met my good friend and traveling partner Josh that my dream actualized.
-                  I have a love for technology and travel! Please like my posts.",
+            first_name: 'Sophia',
+            last_name: 'Carter',
+            email: 'sophia.carter51@example.com',
+            password: 'ilovecartersville',
+            password_confirmation: 'ilovecartersville',
+            img_url: "http://i.imgur.com/MyAycco.jpg",
+            bio: "As a little girl, I always knew I loved to travel. I have a love for technology and travel! Please like my posts.",
             current_city: 'Atlanta, GA',
-            username: 'Garyaintnobitch'
+            username: 'SCarter25'
             )
 User.create(id: 2,
-            first_name: 'Geosh',
-            last_name: 'Kushner',
-            email: 'GaryUndJosh2Gether4Ever@hotmail.com',
-            password: 'garyschickenbreast',
-            password_confirmation: 'garyschickenbreast',
-            img_url: "http://i.imgur.com/ZoNH7EY.jpg",
-            bio: "Hey y'all, I'm Geosh. You might recognize me from MTV's The Real World: Las Vegas. I'm kind of a big deal.",
+            first_name: 'Rose',
+            last_name: 'Garrett',
+            email: 'rose.garrett63@example.com',
+            password: 'kendall',
+            password_confirmation: 'kendall',
+            img_url: "http://i.imgur.com/tOH4EhF.jpg",
+            bio: "As an army kid, I've been all over the world. I love looking for new art in my travels.",
             current_city: 'Atlanta, GA',
-            username: 'Trainingwheelsstillon'
+            username: 'WildRoseThorn'
             )
 User.create(id: 3,
-            first_name: 'Lima',
-            last_name: 'Bean',
-            email: 'itsLiamDamnt@gmail.com',
+            first_name: 'Miriam',
+            last_name: 'Lowe',
+            email: 'miriam.lowe16@example.com',
             password: 'default',
             password_confirmation: 'default',
-            img_url: 'http://i.imgur.com/9f9gnRA.jpg',
-            bio: "Hi everybody I'm Liam. I have a cool jacket and my dog has an underbite.
-                  Don't forget to follow me!",
+            img_url: 'http://i.imgur.com/9lDIrSL.jpg',
+            bio: "I love the outdoors! Nothing is better than a stroll through a park or wilderness. I hope to visit every national park in the U.S.!",
             current_city: 'Atlanta, GA',
-            username: 'LimaBean694eva'
+            username: 'LunaMoth'
             )
 User.create(id: 4,
-            first_name: 'Tommy',
-            last_name: 'The Pupper',
-            email: 'GoodBoy@pups.org',
-            password: 'borkbork',
-            password_confirmation: 'borkbork',
-            img_url: 'http://i.imgur.com/4ID8ez1.jpg',
-            bio: "If you like bad boys, then unfollow immediately. Only good boys here.
-                  Will bork for treats.",
+            first_name: 'Ashley',
+            last_name: 'Gomez',
+            email: 'ashley.gomez75@example.com',
+            password: 'default',
+            password_confirmation: 'default',
+            img_url: 'http://i.imgur.com/7A2Be49.jpg',
+            bio: "I am such a foodie! Nothing is better than finding a hole in the wall place or a food truck and discovering the BEST food!",
             current_city: 'Tokyo, Japan',
-            username: 'MakeBorkNotHeck'
+            username: 'AshGoes'
             )
 User.create(id: 5,
-            first_name: 'Brandi',
-            last_name: 'Posey',
-            email: 'DoomGurl26@aol.com',
+            first_name: 'Julia',
+            last_name: 'Bailey',
+            email: 'julia.bailey83@example.com',
             password: 'default',
             password_confirmation: 'default',
-            img_url: 'http://i.imgur.com/PNPzn02.jpg',
-            bio: "Hi, I'm Brandi. I love quickiemarts and swords. My friends like to joke that I'm a LITTLE CRAZY.
-                  Follow me and check out all my posts!",
-            current_city: 'New York, NY',
-            username: 'DoomGenerationGirl'
+            img_url: 'http://i.imgur.com/JveSa0a.jpg',
+            bio: "Hi there! I'm JUlia and I just adore the theatre! One day I hope to visit New York and go to a Broadway show.",
+            current_city: 'Savannah, GA',
+            username: 'StageJewel'
             )
 User.create(id: 6,
-            first_name: 'Johnny',
-            last_name: 'The Gorilla',
-            email: 'RIPHarambe@hotmail.com',
+            first_name: 'Carl',
+            last_name: 'Flores',
+            email: 'carl.flores24@example.com',
             password: 'default',
             password_confirmation: 'default',
-            img_url: 'http://i.imgur.com/eHVkPAZ.jpg',
-            bio: "JOHNNY GOOD",
-            current_city: 'Cincinatti, OH',
-            username: 'GorillaboiJohnny'
+            img_url: 'http://i.imgur.com/vx6rAiH.jpg',
+            bio: "The sound of the waves and sand in my toes are some of my favorite things. I want to surf all over the world.",
+            current_city: 'San Francisco, CA',
+            username: 'PacificaSoul'
             )
 User.create(id: 7,
-            first_name: 'Jane',
-            last_name: 'Doe',
-            email: 'Jesusismyhomegurl@blessed.com',
+            first_name: 'Harold',
+            last_name: 'Pierce',
+            email: 'harold.pierce84@example.com',
             password: 'default',
             password_confirmation: 'default',
-            img_url: 'http://i.imgur.com/FdUuCe0.jpg',
-            bio: "Hey everybody, I'm Jane. Come check out my posts and follow if you like.",
-            current_city: 'San Francisco, CA',
-            username: 'UnibrowJane'
+            img_url: 'http://i.imgur.com/25NVpHI.jpg',
+            bio: "As a entrepreneur, I love to travel to expose myself to new ideas, people and places.",
+            current_city: 'Cincinati, OH',
+            username: 'HaroldPierce'
             )
 User.create(id: 8,
-            first_name: 'Tom',
-            last_name: 'Anderson',
-            email: 'TomA420@myspace.com',
+            first_name: 'Brian',
+            last_name: 'Murray',
+            email: 'brian.murray88@example.com',
             password: 'default',
             password_confirmation: 'default',
-            img_url: 'http://i.imgur.com/w5VylSQ.jpg',
-            bio: "Hey guys, it's me Tom! Just an ordinary, forgettable guy. Follow me and check out all my adventures!",
+            img_url: 'http://i.imgur.com/HF0gIvK.jpg',
+            bio: "Since I became my own boss, my office is anywhere I want it to be! I love being free to explore without having to put my work on hold.",
             current_city: 'Amsterdam, Netherlands',
-            username: 'MyspaceRulez'
+            username: 'MurraysLaw'
             )
 User.create(id: 9,
-            first_name: 'Ja',
-            last_name: 'Rule',
-            email: 'everythugneeds@laday.com',
+            first_name: 'Aaron',
+            last_name: 'Owens',
+            email: 'arron.owens84@example.com',
             password: 'default',
             password_confirmation: 'default',
-            img_url: 'http://i.imgur.com/zObeuDC.jpg',
-            bio: "Who made these laws? That's what I want to know. So that's why I wear two crosses now. I call it double cross. I believe in God-not religion.
-                  FyreFest 2k18 ya'll, can't wait for the next hunger games.",
+            img_url: 'http://i.imgur.com/QSzdfzQ.jpg',
+            bio: "I worked as a travel agent for 5 years. I want to take some time to travel myself!",
             current_city: 'Exumas, Bahamas',
-            username: 'jaRuleClassWar'
+            username: 'OwensAgent'
             )
 User.create(id: 10,
-            first_name: 'Stephanie',
-            last_name: 'Garland',
-            email: 'fakeName@fake.org',
+            first_name: 'Gabriel',
+            last_name: 'Porter',
+            email: 'gabriel.porter82@example.com',
             password: 'default',
             password_confirmation: 'default',
-            img_url: 'http://i.imgur.com/Z60LgkX.jpg',
-            bio: "Pommy ipsum got his end away middle class curry sauce the black death, wedding tackle balderdash off with her head nonsense pork scratchings, knackered codswallop flabbergasted off with her head. Is she 'avin a laugh rambunctious off t'pub bloke bent as a nine bob note snotty nosed brat good old fashioned knees up the chippy lost her marbles made a pig's ear of it a bit wonky Moriarty, loo it's the bees knees bugger every fortnight oopsy-daisies we'll be 'avin less of that Union Jack accordingly porky-pies. Gravy cheese and chips marvelous ever so houlligan loo rivetting stuff, scouser punter gob up the duff knee high to a grasshopper i'll be a monkey's uncle, whizz pikey off t'shop toad in the whole.",
+            img_url: 'http://i.imgur.com/44Hq2PO.jpg',
+            bio: "I'm a student in my last year of university, and I'm taking every study abroad opportunity I can! I'm hoping to spend a year after graduation travelling in order to find the best place to start my career!",
             current_city: 'London, United Kingdom',
-            username: 'jollyHood'
+            username: 'GabrielWanders'
             )
 
 # seeded bonds
