@@ -8,7 +8,7 @@ Vag·a·bond (noun)
 Travel community for users to share posts about their favorite locations around the world.
 
 ## Deployed Link
-* [Heroku Link](http://vagabond-by-the-best-group.herokuapp.com/)
+* [Heroku Link](http://vag-a-bond.herokuapp.com/)
 
 
 ## App Overview
