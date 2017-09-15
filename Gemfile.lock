@@ -75,6 +75,9 @@ GEM
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     gmaps4rails (2.1.2)
+    graphiql-rails (1.4.4)
+      rails
+    graphql (1.6.8)
     i18n (0.8.1)
     jbuilder (2.6.3)
       activesupport (>= 3.0.0, < 5.2)
@@ -199,6 +202,8 @@ DEPENDENCIES
   friendly_id (~> 5.1.0)
   geocoder
   gmaps4rails
+  graphiql-rails
+  graphql
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
@@ -219,4 +224,4 @@ DEPENDENCIES
   will_paginate (~> 3.1.1)
 
 BUNDLED WITH
-   1.14.6
+   1.15.4
